@@ -8,8 +8,8 @@ html {
 }
 
 @font-face  { 
-    font-family: Pollock;
-    src: url(fonts/Pollock.ttf);
+    font-family: 'Pollock';
+    src: url('./fonts/Pollock.woff2') format('woff2'), url('./fonts/Pollock.woff') format('woff');
 }
 
 .header {
@@ -60,7 +60,6 @@ html {
 }
 
 .header__column2 {
-    background: green;
     width: 28.45%;
     display: flex;
     flex-direction: column;
@@ -145,10 +144,242 @@ html {
 
 .header__column1-content--first {
     font-family: "Pollock", sans-serif;
-    font-size: 72px;
+    font-size: 65px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #064557;
+    position: relative;
+    z-index: 10;
+}
+
+.header__column1-content--first::before {
+    content: "";
+    position: absolute;
+    width: 953px;
+    height: 120px;
+    background: url("img/rule.png") no-repeat center;
+    right: 2px;
+    top: 12px;
 }
 
 .header__column1-content--second {
-    font-size: 72px;
+    margin-top: 0px;
     font-family: sans-serif;
-}   
+    font-family: "Pollock", sans-serif;
+    font-size: 65px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: white;
+    position: relative;
+    margin-top: -4px;
+    z-index: 9;
+}
+
+.header__column1-content--second::before {
+    content: "";
+    position: absolute;
+    width: 953px;
+    height: 120px;
+    background: url("img/rules2.png") no-repeat center;
+    right: 166px;
+    top: -61px;
+    z-index: 1;
+}
+
+.orange-text {
+    color: #ffa500;
+}
+
+.white-text {
+    color: white;
+}
+
+.eight {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header__column1-content--gift {
+    font-family: "Roboto";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    color: #064557;
+}
+
+.header__column1-content--sucess {
+    font-family: "Roboto";
+    font-weight: 100;
+    color: #064557;
+    font-size: 14px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.header__column1-content--sucess::before {
+    content: "";
+    position: absolute;
+    height: 11px;
+    width: 270px;
+    background: url("img/rules2.png") no-repeat;
+    left: -100px;
+    top: 3px;
+    z-index: 0;
+}
+
+.header__column1-content--btn {
+    width: 200px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    background: #ffa500;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-family: "Roboto Condensed";
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-top: 42px;
+    margin-bottom: 122px;
+    position: relative;
+}
+
+.header__column1-content--btn::before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 20px;
+    background: url("img/arrow-main.png") no-repeat;          
+    background-size: 9px;
+    top: 30px;
+    left: 156px;
+}
+
+.header__column1-content--btn::after {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 20px;
+    background: url("img/arrow-main2.png") no-repeat;          
+    background-size: 18px;
+    top: 35px;
+    left: 143px;
+}
+
+.header__column1-content--btn:hover {
+    cursor: pointer;
+    background: white;
+}
+
+.header__column1-content--arrow {
+    width: 52px;
+    height: 32px;
+    background: url("img/scroll1.png") no-repeat center 3px,
+                url("img/scroll2.png") no-repeat center;
+    position: absolute;
+    top: 520px;
+    left: 350px;
+}
+
+.header__column1-content--arrow:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .3s ease;
+}
+
+.header__column2-socials {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 450px;
+    width: 208px;
+    height: 60px;
+    font-size: 0;
+}
+
+.socials-vk {
+    background: red;
+    background: url("img/vk.png") no-repeat center;
+    height: 30px;
+    width: 40px;
+}
+
+.socials-fb {
+    background: url("img/fb.png") no-repeat center;
+    height: 34px;
+    width: 40px;
+}
+
+.socials-tg {
+    background: url("img/tg.png") no-repeat center;
+    height: 30px;
+    width: 40px;
+}
+
+.socials-vk:hover {
+    background:  url("img/vk-h.png") no-repeat center; 
+}
+
+.socials-fb:hover {
+    background:  url("img/fb-h.png") no-repeat center; 
+}
+
+.socials-tg:hover {
+    background:  url("img/tg-h.png") no-repeat center; 
+}
+
+.header__column1-menu-title {
+    font-size: 60px;
+    font-family: "Pollock";
+    text-transform: uppercase;
+    color: #ffa500;
+    letter-spacing: 3px;
+    margin-left: 142px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 10;
+}
+
+.header__column1-menu-number {
+    font-size: 103px;
+    margin-top: -98px;
+    margin-left: -101px;
+    font-family: "Cinzel";
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.header__column1-menu-title::after {
+    content: "";
+    position: absolute;
+    height: 306px;
+    width: 500px;
+    top: -24px;
+    left: -417px;;
+    background: url("img/text-bg.png") no-repeat;
+    z-index: 0;   
+}
+
+.header__column1-menu-title--line {
+    width: 100%;
+    height: 1px;
+    background: white;
+    margin-top: -39px;
+    margin-bottom: 20px;
+    z-index: 10;
+}
+
+.header__column1-menu-pretitle {
+    color: white;
+    font-family: "Pollock";
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 8px;
+}
+
+
